@@ -33,10 +33,23 @@
             width: 100%;
             bottom: 0;
         }
+
+        .carouselimg{
+            width: 100vw;
+            height: 75vh;
+        }
+        
+        @media only screen and (max-width: 768px){
+            .carouselimg{
+                width: 100vw;
+                height: 30vh;
+            }
+        }
     </style>
 </head>
 
 <body>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
         <div class="container-fluid">
@@ -54,7 +67,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="./about.html">About Us</a>
                     </li>
 
 
@@ -63,9 +76,40 @@
             </div>
         </div>
     </nav>
+    
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h1 class="text-white text-center position-absolute top-50 start-50 translate-middle">Events Organized by Us</h1>
+            <img src="./Photographs/event1.jpg" class="d-block carouselimg" alt="...">
+          </div>
+          <div class="carousel-item">
+            <h1 class="text-white text-center position-absolute top-50 start-50 translate-middle">Events Organized by Us</h1>
+            <img src="./Photographs/event2.jpg" class="d-block carouselimg" alt="...">
+          </div>
+          <div class="carousel-item">
+            <h1 class="text-white text-center position-absolute top-50 start-50 translate-middle">Events Organized by Us</h1>
+            <img src="./Photographs/event3.jpg" class="d-block carouselimg" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
 
     <!-- Accordian -->
-
 
     <div class="accordion bgtransparent mx-3 my-5 px-3 d-flex flex-column" id="accordionPanelsStayOpenExample">
         <div class="accordion-item bgtransparent">
@@ -129,8 +173,35 @@
         </div>
     </div>
 
+    <!-- Testimonials -->
+    <section class="text-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fs-1">Video Testimonials</h2>
+            <div class="row justify-content-center">
+
+                <!-- Video Testimonial 1 -->
+                <div class="col-lg-6 mb-4">
+                    <h3 class="text-white text-center">Testimonial 1</h3>
+                    <video class="d-block w-100" controls>
+                        <source src="./Videos/MeghaJain.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Video Testimonial 2 -->
+                <div class="col-lg-6 mb-4">
+                    <h3 class="text-white text-center">Testimonial 2</h3>
+                    <video class="d-block mx-auto" height="340" controls>
+                        <source src="./Videos/CarmenPoll.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <!-- Footer -->
-    <footer class=" fixbottom d-flex flex-wrap justify-content-between align-items-center py-3 border-top bg-dark">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center mt-5 py-2 border-top bg-dark">
         <div class="col-md-4 d-flex align-items-center">
             <a href="/" class="mb-3 me-2 mb-md-0 text-light text-decoration-none lh-1">
                 <svg class="bi" width="30" height="24">
